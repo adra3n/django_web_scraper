@@ -1,2 +1,15 @@
-<p>{{ element }}</p>
-<a href="{% url 'scrape' %}">Back</a>
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
+  </head>
+  <body>
+    <div class="results-container">
+      <div class="results">
+        <p>{{ element }}</p>
+        <a class="back-button" href="{% url 'scrape' %}">Back</a>
+      </div>
+    </div>
+  </body>
+</html>
